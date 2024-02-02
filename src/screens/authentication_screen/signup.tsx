@@ -1,4 +1,6 @@
 import React from "react";
+import { IoMdMail } from "react-icons/io";
+import { Link } from "react-router-dom";
 
 function SignUp() {
   return (
@@ -23,18 +25,35 @@ function SignUp() {
           <p className="font-sans font-semibold mt-3 mx-5">
             Vui lòng nhập địa chỉ email của ngôi trường bạn đang theo học
           </p>
-          <input
-            className="border-2  rounded-l-lg w-80 h-12"
-            style={{ backdropFilter: "blur(7.61834192276001px)" }}
-            type="text"
-            placeholder="Email"
-          />
-          {/* <button className="bg-black text-white rounded-r-lg w-24 h-12">
-            Gửi
-          </button> */}
-          <p className="font-sans font-semibold mt-3 mx-5">
-            Chúng tôi sẽ gửi cho bạn một email xác nhận
-          </p>
+          <div className="relative mt-5">
+            <input
+              className="border-2 rounded-l-lg w-full h-12 pl-10 ring-2 ring-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-300 ease-in-out"
+              style={{ backdropFilter: "blur(7.61834192276001px)" }}
+              type="text"
+              placeholder="user@school.edu.vn"
+            />
+            <div className="absolute left-3 top-1/2 transform -translate-y-1/2">
+              <IoMdMail color="gray" height="24px" width="24px" />
+            </div>
+          </div>
+          <button className="bg-blued text-white w-80 h-14 mx-20 mt-6 rounded-xl">
+            Tạo tài khoản
+          </button>
+          <hr className="w-2/3 mx-16 h-px my-8 bg-black border-0 rounded dark:bg-black" />
+          <div className="  mx-32">
+            <p className="font-sans font-semibold">
+              Đã có tài khoản?{" "}
+              <Link to="/login">
+                <span className="text-blued">Đăng nhập ngay</span>
+              </Link>
+            </p>
+          </div>
+          <div className="mx-6 mt-2 ">
+            <p className="font-sans font-semibold text-gray-400">
+              Khi tạo tài khoản, bạn vui lòng đọc kỹ
+              <span className="text-blued"> Chính sách bảo mật</span>
+            </p>
+          </div>
         </div>
       </div>
     </div>
