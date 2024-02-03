@@ -36,9 +36,11 @@ function SignUp() {
               <IoMdMail color="gray" height="24px" width="24px" />
             </div>
           </div>
-          <button className="bg-blued text-white w-80 h-14 mx-20 mt-6 rounded-xl">
-            Tạo tài khoản
-          </button>
+          <Link to="/signup2">
+            <button className="bg-blued text-white w-80 h-14 mx-28 mt-6 rounded-xl">
+              Tạo tài khoản
+            </button>
+          </Link>
           <hr className="w-2/3 mx-16 h-px my-8 bg-black border-0 rounded dark:bg-black" />
           <div className="  mx-32">
             <p className="font-sans font-semibold">
